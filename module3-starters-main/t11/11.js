@@ -97,7 +97,8 @@ let html = "";
 
 
 
-for (let i = 0; i < picArray.length;i++){
+for (let i = 0; i < picArray.length;i++)
+{
 
   html = html + `<article class="card">
    <h2>${picArray[i].title}</h2>
@@ -110,25 +111,27 @@ for (let i = 0; i < picArray.length;i++){
 
 
 }
-let targ = document.querySelector("#pictures")
+
+const targ = document.querySelector("#pictures")
 targ.innerHTML = html
 
 const artikkelit = document.querySelectorAll(".card")
 
 
-for (let i = 0; i < picArray.length;i++){
+for (let i = 0; i < picArray.length;i++)
+{
 
-  artikkelit[i].addEventListener("click",(event) => {
+  artikkelit[i].addEventListener("click",() =>
+  {
 
        document.querySelector("#kuva").src =`img/pic${i+1}.jpg`
        document.querySelector("dialog").showModal()
 
   })
-
-
 }
-document.querySelector("span").addEventListener("click", (event) => {
-document.querySelector("dialog").close()
+
+document.querySelector("span").addEventListener("click", () => {
+  document.querySelector("dialog").close()
 })
 
 
