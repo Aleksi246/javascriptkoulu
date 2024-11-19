@@ -14,15 +14,16 @@ const students = [
   },
 ];
 
-let idtarget ;
+const idtarget = document.querySelector("#target");
 
 for(let i = 0;i< students.length;i++){
 
-  let child = document.createElement("option")
-  child.value = `${students[i].id}`
-  idtarget = document.querySelector("#target").appendChild(child)
+  let child1 = document.createElement("option")
+  child1.value = `${students[i].id}`
+  child1.innerHTML = `${students[i].name}`
+  idtarget.appendChild(child1)
 
-  idtarget.appendChild(document.createTextNode(`${students[i].name}`))
+
 
 }
 

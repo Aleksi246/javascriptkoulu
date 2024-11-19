@@ -110,5 +110,5 @@ for (let i = 0; i < picArray.length;i++){
 
 
 }
-let targ = document.querySelector("#pictures")
+const targ = document.querySelector("#pictures")
 targ.innerHTML = html

@@ -1,14 +1,20 @@
-let idtarget = document.querySelector("#target").appendChild(document.createElement("li"))
-idtarget.appendChild(document.createTextNode("First item"))
-idtarget = document.querySelector("#target").appendChild(document.createElement("li"))
-idtarget.appendChild(document.createTextNode("Second item"))
-idtarget = document.querySelector("#target").appendChild(document.createElement("li"))
-idtarget.appendChild(document.createTextNode("Third item"))
 
 
 
-const kakkonen = document.querySelector("#target li:nth-child(2)")
-kakkonen.classList.add("myitem")
+function crli(name){
+  const idtarget = document.querySelector("#target")
+  const li = document.createElement("li")
+  li.innerHTML = name
+  idtarget.appendChild(li)
+}
+
+crli("First item")
+crli("Second item")
+crli("third item")
+
+document.querySelector("#target li:nth-child(2)").classList.add("my-item")
+//const kakkonen = document.querySelector("#target li:nth-child(1)")
+//kakkonen.classList.add("myitem")
 
 /*
 idtarget[0].innerHTML = <li>First item</li>
