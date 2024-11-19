@@ -112,3 +112,19 @@ for (let i = 0; i < picArray.length;i++){
 }
 let targ = document.querySelector("#pictures")
 targ.innerHTML = html
+
+const artikkelit = document.querySelectorAll(".card")
+
+
+artikkelit.forEach(artikkeli =>{
+
+  artikkeli.addEventListener("click",(event) => {
+
+       document.querySelector("#kuva").src =`img/pic${artikkeli}.jpg`
+  })
+
+
+})
+
+
+
