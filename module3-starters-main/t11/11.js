@@ -116,15 +116,19 @@ targ.innerHTML = html
 const artikkelit = document.querySelectorAll(".card")
 
 
-artikkelit.forEach(artikkeli =>{
+for (let i = 0; i < picArray.length;i++){
 
-  artikkeli.addEventListener("click",(event) => {
+  artikkelit[i].addEventListener("click",(event) => {
 
-       document.querySelector("#kuva").src =`img/pic${artikkeli}.jpg`
+       document.querySelector("#kuva").src =`img/pic${i+1}.jpg`
+       document.querySelector("dialog").showModal()
+
   })
 
 
+}
+document.querySelector("span").addEventListener("click", (event) => {
+document.querySelector("dialog").close()
 })
-
 
 
