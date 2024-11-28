@@ -124,7 +124,7 @@ for (let i = 0; i < picArray.length;i++)
   artikkelit[i].addEventListener("click",() =>
   {
 
-       document.querySelector("#kuva").src =picArray[i].image.large
+       document.querySelector("#kuva").src = picArray[i].image.large
        document.querySelector("dialog").showModal()
 
   })
